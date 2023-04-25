@@ -1,12 +1,12 @@
 import streamlit as st
-from pytube import Youtube
+from pytube import YouTube
 
 st.title("Youtube Downloader")
 st.subheader("Insira a URL do vídeo: ")
 url = st.text_input("URL: ")
 
 if url != "":
-    yt = Youtube(url)
+    yt = YouTube(url)
     st.image(yt.thumbnail_url, width=300)
     st.subheader("""
     {}
